@@ -72,7 +72,7 @@ export default function Auth() {
                 </div>
 
                 <div className="flex justify-center my-20">
-                    <img src="/images/Logo.png" alt="Logo" className="w-1/4 h-auto"/>
+                    <img src="https://assets.hackclub.com/icon-rounded.png" alt="Logo" className="w-1/4 h-auto"/>
                 </div>
 
                 <button
