@@ -3,7 +3,7 @@
 ![Banner](https://files.catbox.moe/ewlkfh.png)
 
 <p align="center">
-  A modern web application for managing Club signups using Next.js, Tailwind CSS, and Supabase, so its free and EASYYYY to manage
+This project is a simplified version of a previous voting app I created for highseas but havent published. I realized that the project might be difficult for people to understand, so I made a new repository with modifications to make it easier to demo.  You can find the other repositories on my profile they are all the same *project* to me though. This is not an update to the original project, but both repos are open. Its more purpose relevant to HackClub! First time dealing with production DB! 🤔
 </p>
 
 <p align="center">
