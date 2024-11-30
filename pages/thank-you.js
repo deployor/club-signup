@@ -40,7 +40,7 @@ export default function ThankYou() {
                     </h1>
                     <p className="text-gray-300">
                         Thank you for your feedback! <br/>
-                        If you want to log out, please visit this page again!
+                        If you want to no longer be signed up, please visit this page again!
                     </p>
                 </div>
                 <button
