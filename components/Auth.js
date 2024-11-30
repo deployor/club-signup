@@ -67,8 +67,8 @@ export default function Auth() {
                 )}
 
                 <div className="space-y-2 text-center">
-                    <h1 className="text-3xl font-bold text-white">Hack Club Sign Up</h1>
-                    <p className="text-gray-400 text-sm">Join our Hack Club and explore the world of programming!</p>
+                    <h1 className="text-3xl font-bold text-white">DEMO Club Signup</h1>
+                    <p className="text-gray-400 text-sm">This is a demoooo!</p>
                 </div>
 
                 <div className="flex justify-center my-20">
@@ -88,7 +88,7 @@ export default function Auth() {
                 </button>
 
                 <p className="text-sm text-gray-400 text-center">
-                    Note: Please use only your school email address; others will not be accepted! <br/><br/>
+                    Note: Normally only accepts school emails, but everythign works as this is a demooooo! <br/><br/>
                     After signing in, you will be redirected to the confirmation page. <br/><br/>
                     Your email address will only be used for club organization. More information can be found at: <a href="/privacy"
                         className="text-blue-500 underline">/privacy</a>.
