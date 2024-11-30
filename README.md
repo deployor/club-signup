@@ -61,31 +61,35 @@ npm run start
 1. Supabase Setup
       Create a new Supabase project
       Run this SQL to create required table:
+      Also make sure to remvoe the email check line if u wanna allow any domain!
       
 ```sql
--- Table
-create table signups (
-  id uuid default uuid_generate_v4() primary key,
-  email text unique not null,
-  signed_up boolean default false,
-  created_at timestamp with time zone default timezone('utc'::text, now()) not null
+-- TABLE
+CREATE TABLE signups (
+  id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT TIMEZONE('utc'::text, NOW()) NOT NULL,
+  email TEXT NOT NULL UNIQUE,
+  signed_up BOOLEAN DEFAULT FALSE,
+  CONSTRAINT valid_email CHECK (email LIKE '%@fbi.gov') // Remove this row if u dont want to check mail domains
 );
 
 -- RLS
-alter table signups enable row level security;
+ALTER TABLE signups ENABLE ROW LEVEL SECURITY;
 
--- Policies
-create policy "Users can read their own signup status"
-  on signups for select
-  using (auth.email() ->> 'email' = email);
+--  policy
+CREATE POLICY "Users can view own signup" ON signups
+  FOR SELECT USING (auth.email() = email);
 
-create policy "Users can update their own signup status"
-  on signups for update
-  using (auth.email() ->> 'email' = email);
+-- polidy
+CREATE POLICY "Users can insert own signup" ON signups
+  FOR INSERT WITH CHECK (auth.email() = email);
 
-create policy "Users can insert their own signup"
-  on signups for insert
-  with check (auth.email() ->> 'email' = email);
+-- policy
+CREATE POLICY "Users can update own signup" ON signups
+  FOR UPDATE USING (auth.email() = email);
+
+-- policy
+CREATE INDEX signups_email_idx ON signups(email);
 ``` 
 Now simply head to the authentication tab (lock symbol) and disable email and enable azure!
 
