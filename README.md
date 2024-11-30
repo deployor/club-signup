@@ -1,6 +1,6 @@
-<h1 align="center">Club Signup App</h1>
+<h1 align="center">Club Signup</h1>
 
-![Banner](https://picsum.photos/200/300)
+![Banner](https://files.catbox.moe/ewlkfh.png)
 
 <p align="center">
   A modern web application for managing Club signups using Next.js, Tailwind CSS, and Supabase, so its free and EASYYYY to manage
@@ -100,7 +100,7 @@ Now simply head to the authentication tab (lock symbol) and disable email and en
           - email
           - openid
           - profile
-      7. Enable Microsoft authentication in Supabase using these credentials
+      7. Enable Azure in Supabase using the value from the Secret u crerated and the Application ID which u find in the Overview!
 
 
 ## Deployment
