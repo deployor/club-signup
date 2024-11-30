@@ -88,7 +88,7 @@ export default function Auth() {
                 </button>
 
                 <p className="text-sm text-gray-400 text-center">
-                    Note: Normally only accepts school emails, but everythign works as this is a demooooo! <br/><br/>
+                    Note: Normally only accepts school emails, but everything works as this is a demooooo! <br/><br/>
                     After signing in, you will be redirected to the confirmation page. <br/><br/>
                     Your email address will only be used for club organization. More information can be found at: <a href="/privacy"
                         className="text-blue-500 underline">/privacy</a>.
